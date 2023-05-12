@@ -1,0 +1,134 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    /* background-color: rgb(220, 245, 245); */
+    background-image:url('/images/KwJg.gif'); 
+    background-position: center;
+    background-size: cover;
+    /* overflow: hidden; */
+    /* background-repeat:repeat;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height:500px;
+    margin:50px; 
+    background-color: rgb(94, 235, 153);
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
+    box-shadow: 0 35px 35px rgb(0,0,0,0.1);
+}
+
+.card {
+    background: white;
+    
+    border-radius: 4px;
+    height: 85vh;
+    width: 80vw;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+  }
+  .sub{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+  }
+  
+
+
+   img.potter{
+    height: 500px;
+    width: 500px;
+    border-radius: 20%;
+    margin-left: 10px;
+   }
+  img.birthday {
+    /* max-height: 40vh; */
+    height: 100px;
+  }
+.specks{
+    transform:rotateX('20deg');
+}
+  .specks:hover{
+    transform: rotate(180deg);
+}
+  
+  .text {
+    padding: 1em;
+    position: relative;
+    
+  }
+  .para{
+    transform-style: preserve-3d;
+  }
+
+  .text:hover .para {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: white;
+}
+
+.card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+  
+  .muted {
+    opacity: 0.8;
+  }
+  
+  .space {
+    height: 100px;
+  }
+
+  img.potter {
+    /* adjust the below to control the 3D effect */
+    --x: 10px;
+    --y: 20px;
+    transform: perspective(1000px) rotateX(var(--_a,40deg));
+    /* */
+    clip-path: polygon(       
+       var(--y)              var(--y),       
+       calc(100% - var(--y)) var(--y),       
+       calc(100% - var(--y)) calc(100% - var(--y)),       
+       calc(100% - var(--y) - var(--x)) var(--_c,100%),       
+       calc(var(--x) + var(--y))        var(--_c,100%),      
+       var(--y)        calc(100% - var(--y))       
+       );
+    outline: var(--y) solid rgba(192, 234, 240, 0.4);
+    outline-offset: calc(-1*var(--y));
+    padding: var(--y) var(--y) 0 var(--y);
+    transition: 1s;
+  }
+  .sub:hover img {
+    --_a: 0deg;
+    --_c: calc(100% - var(--y));
+  }

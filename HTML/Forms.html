@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>FORMS</title>
+</head>
+<body>
+    <form action="" method="">
+        <fieldset>
+            <legend>FORM DETAILS</legend>
+        <label>Name</label> <input type="text" name="fname" value="" placeholder="YourName"/><br/><br/>
+        
+        <label>Password</label> <input type="password" name=""/><br/><br/>
+        
+        <!---for radio button same name for all the buttons such that 
+        anyone can be selected at a time-->
+        
+        <label>Gender</label> <input type="radio" name="gender" id="male"/><label for="male">Male</label>
+            <input type="radio" name="gender" id="female"/><label for="female">Female</label><br/><br/>
+        
+        <label>CheckBox</label> <input type="checkbox" name="hobby" id="music"/><label for="music">Music</label>
+            <input type="checkbox" name="hobby" id="sport"/><label for="sport">Sport</label><br/><br/>
+
+        <label>SelectBox</label><select name="" size="" multiple>
+            <option value="one">Select 1</option>
+            <option value="two">Select 2</option>
+            <option value="three">selected>Select 3</option>
+            <option value="four">Select 4</option>
+
+        </select><br/><br/>
+
+        <label>OptGrp</label><select>
+            <optgroup label="Toyota">
+                <option>t1</option>
+                <option>t1</option>
+                <option>t1</option>
+            </optgroup>
+            <optgroup label="Benz">
+                <option>b1</option>
+                <option>b1</option>
+                <option>b1</option>
+            </optgroup>
+        </select><br/><br/>
+
+        <label>Datalist</label><input id="cars">
+            <datalist id="cars">
+                <option value="c1">
+                <option value="c1">
+                <option value="c1">
+                <option value="c1">
+                <option value="c1">
+            </datalist><br/><br/>
+
+        <label>UploadFile</label><input type="file" name=""/>
+<!--accept="image/*"
+    for particular file format-->
+        <label>Textarea</label><br/><textarea rows="10" cols="60"></textarea><br/><br/>
+
+        <input type="submit" value="Save"/>
+        <input type="button" value="Click"/>
+        <input type="reset" />
+        <!--Can use images also-->
+    </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXCOLUMN</title>
+    <style>
+        .divcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border: 2px solid black;
+            flex-wrap: wrap;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            /* border: 2px solid black;
+            background-color: wheat; */
+            /* background: url('/images/coolbg1.jpg') top center repeat-y;
+            background-position: center;            
+            background-size: 100%; */
+            margin: 20px;
+            /* width: 10px; */
+            align-items: center;
+            justify-content: end;
+
+
+        }
+
+        .inside {
+            margin: 10px;
+        }
+
+        .tag {
+            /* border: 2px solid darkcyan;
+            background-color: aliceblue; */
+            border-radius: 10%;
+            padding: 10%;
+
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid fuchsia;
+
+            margin: 20px;
+        }
+
+        .image {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+
+        .image:hover {
+            transform: scale(1.5);
+        }
+
+
+        .columncontainer {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid fuchsia;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divcontainer">
+        <div class="home">
+            <div class="inside">
+                <a href="index.html" target="_self" class="tag">HOME</a>
+            </div>
+        </div>
+        <div class="content">
+            <!-- <h1>FLEX</h1> -->
+            <div class="inside">
+                <a href="flexrow.html" target="_self" class="tag">FLEXROW</a>
+            </div>
+            <div class="inside">
+                <a href="flexcolumn.html" target="_self" class="tag">FLEXCOLUMN</a>
+            </div>
+            <div class="inside">
+                <a href="flexwrap.html" target="_self" class="tag">FLEXWRAP</a>
+            </div>
+            <div class="inside">
+                <a href="flexjustify.html" target="_self" class="tag">FLEXJUSTIFY</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <h2>Flex-Column</h2>
+        <img src="/images/Square.png" alt="Square" width="100px" height="100px" class="image">
+        <img src="/images/Square.png" alt="Square" width="100px" height="100px" class="image">
+        <img src="/images/Circle.png" alt="Square" width="100px" height="100px" class="image">
+        <!-- <img src="/images/Square.png" alt="Square" width="100px" height="100px">
+        <img src="/images/Circle.png" alt="Square" width="100px" height="100px"> -->
+
+    </div>
+    <div class="columncontainer">
+        <h2>Flex-Column-Reverse</h2>
+
+        <img src="/images/Square.png" alt="Square" width="100px" height="100px" class="image">
+        <img src="/images/Square.png" alt="Square" width="100px" height="100px" class="image">
+        <img src="/images/Circle.png" alt="Square" width="100px" height="100px" class="image">
+        <!-- <img src="/images/Square.png" alt="Square" width="100px" height="100px">
+        <img src="/images/Circle.png" alt="Square" width="100px" height="100px"> -->
+    </div>
+
+</body>
+
+</html>
