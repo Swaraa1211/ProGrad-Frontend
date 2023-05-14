@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    min-height: 10vh;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.alpha{
+    /* height: 50px;
+    width: 50px; */
+    border-radius: 50%;
+    /* background: crimson; */
+    margin: 2px;
+    /* font-weight: bolder; */
+    animation: animate 3s alternate infinite;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.alpha:nth-child(1){
+    animation-delay: .2s;
+}
+.alpha:nth-child(2){
+    animation-delay: .4s;
+}
+.alpha:nth-child(3){
+    animation-delay: .6s;
+}
+.alpha:nth-child(4){
+    animation-delay: .8s;
+}
+.alpha:nth-child(5){
+    animation-delay: 1.0s;
+}
+.alpha:nth-child(6){
+    animation-delay: 1.2s;
+}
+.alpha:nth-child(7){
+    animation-delay: 1.4s;
+}
+.alpha:nth-child(8){
+    animation-delay: 1.6s;
+}
+.alpha:nth-child(9){
+    animation-delay: 1.8s;
+}
+.alpha:nth-child(10){
+    animation-delay: 2s;
+}
+
+.cal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    min-height: 100vh;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.calGrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+.cal .calGrid .box{
+    background: rgb(122, 178, 243);
+    padding: 20px;
+    border-radius: 20%;
+    place-content: center;
+    /* width: 80px;
+    height: 80px; */
+    display: grid;
+}
+
+.cal .box:nth-child(1){
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.cal .calGrid .element{
+    background: rgb(122, 178, 243);
+    padding: 20px;
+    border-radius: 20%;
+    place-content: center;
+    width: 80px;
+    height: 80px;
+    display: grid;
+}
+.cal .box:nth-child(18){
+    width: 180px;
+    grid-column: span 2;
+    grid-row: span 1;
+}

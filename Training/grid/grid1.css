@@ -35,6 +35,7 @@ body{
     /* align-items: center; */
     place-content: center;
     display: grid;
+    /* width: 50rem; */
 }
 
 .container .box:hover{
@@ -50,6 +51,23 @@ body{
     transform: scale(1.5);
 }
 
+/* .contentmove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+} */
+.container .box .move{
+    transform: translateX(100%); /* Animation start out of the screen */
+    display: block;
+    position: relative;
+    width: 100%;
+  /* Add the animation */
+  animation: move 30s linear infinite
+}
+@keyframes move {
+    to { transform: translateX(-100%); }
+  }
 
 .container .box:nth-child(1){
     grid-column: span 2;
@@ -72,6 +90,10 @@ body{
 
 .container .box:nth-child(7){
     grid-column: span 3;
+    grid-row: span 1;
+}
+.container .box:nth-child(8){
+    grid-column: span 4;
     grid-row: span 1;
 }
 /*
